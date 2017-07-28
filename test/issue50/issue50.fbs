@@ -1,0 +1,17 @@
+//namespace issue50;
+
+union FileAny
+{
+FileGameConf,
+}
+
+table FileGameConf
+{
+}
+
+table File
+{
+any:FileAny;
+}
+root_type File;
+
