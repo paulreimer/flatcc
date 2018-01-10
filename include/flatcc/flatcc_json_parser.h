@@ -17,7 +17,7 @@
 #include "flatcc/flatcc_unaligned.h"
 
 #define PDIAGNOSTIC_IGNORE_UNUSED
-#include "flatcc/portable/pdiagnostic_push.h"
+#include "flatcc/portable/pprologue.h"
 
 enum flatcc_json_parser_flags {
     flatcc_json_parser_f_skip_unknown = 1,
@@ -867,5 +867,5 @@ int flatcc_json_parser_table_as_root(flatcc_builder_t *B, flatcc_json_parser_t *
         const char *buf, size_t bufsiz, int flags, const char *fid,
         flatcc_json_parser_struct_f *parser);
 
-#include "flatcc/portable/pdiagnostic_pop.h"
+#include "flatcc/portable/pepilogue.h"
 #endif /* FLATCC_JSON_PARSE_H */

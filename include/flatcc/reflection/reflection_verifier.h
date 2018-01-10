@@ -8,7 +8,7 @@
 #endif
 #include "flatcc/flatcc_verifier.h"
 #define PDIAGNOSTIC_IGNORE_UNUSED
-#include "flatcc/portable/pdiagnostic_push.h"
+#include "flatcc/portable/pprologue.h"
 
 static int __reflection_Type_table_verifier(flatcc_table_verifier_descriptor_t *td);
 static int __reflection_EnumVal_table_verifier(flatcc_table_verifier_descriptor_t *td);
@@ -202,5 +202,5 @@ static inline int reflection_Schema_verify_as_root_with_type_hash(const void *bu
     return flatcc_verify_table_as_typed_root(buf, bufsiz, thash, &__reflection_Schema_table_verifier);
 }
 
-#include "flatcc/portable/pdiagnostic_pop.h"
+#include "flatcc/portable/pepilogue.h"
 #endif /* REFLECTION_VERIFIER_H */

@@ -7,16 +7,18 @@
  * e.g.
  * #define PDIAGNOSTIC_IGNORE_USED_FUNCTION
  * #define PDIAGNOSTIC_IGNORE_USED_VARIABLE
- * #include "pdiagnostic_push"
+ * #include "pprologue.h"
  * ...
- * #include "pdiagnostic_pop.h"
+ * #include "pepilogue.h"
  * <eof>
  *
  * or if push pop isn't desired:
  * #define PDIAGNOSTIC_IGNORE_USED_FUNCTION
  * #define PDIAGNOSTIC_IGNORE_USED_VARIABLE
- * #include "pdiagnostic.h"
+ * #define PDIAGNOSTIC_PUSH_POP_SKIP // added
+ * #include "pprologue.h"
  * ...
+ * #include "pepilogue.h"
  * <eof>
  *
  *
@@ -38,9 +40,3 @@
 #endif
 
 #endif /* PDIAGNOSTIC_PUSH_H */
-
-/*
- * We cannot handle nested push, but we can add to the parent context
- * so keep this outside the header include guard.
- */
-#include "pdiagnostic.h"

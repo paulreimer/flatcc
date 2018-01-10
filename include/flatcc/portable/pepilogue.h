@@ -1,0 +1,14 @@
+#ifndef PEPILOGUE_H
+#define PEPILOGUE_H
+
+#ifdef PCPLUSPLUS_GUARD_ACTIVE
+} /* extern "C" */
+#undef PCPLUSPLUS_GUARD_ACTIVE
+#endif /* PCPLUSPLUS_GUARD_ACTIVE */
+
+#ifdef PDIAGNOSTIC_PUSH_POP_ACTIVE
+#include "pdiagnostic_pop.h"
+#undef PDIAGNOSTIC_PUSH_POP_ACTIVE
+#endif /* PDIAGNOSTIC_PUSH_POP_ACTIVE */
+
+#endif /* PEPILOGUE_H */

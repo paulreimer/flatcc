@@ -10,7 +10,7 @@
 #include "flatbuffers_common_builder.h"
 #endif
 #define PDIAGNOSTIC_IGNORE_UNUSED
-#include "flatcc/portable/pdiagnostic_push.h"
+#include "flatcc/portable/pprologue.h"
 #undef flatbuffers_identifier
 #define flatbuffers_identifier "BFBS"
 #undef flatbuffers_extension
@@ -181,5 +181,5 @@ static inline reflection_Schema_ref_t reflection_Schema_create(flatbuffers_build
 }
 __flatbuffers_build_table_prolog(flatbuffers_, reflection_Schema, reflection_Schema_identifier, reflection_Schema_type_identifier)
 
-#include "flatcc/portable/pdiagnostic_pop.h"
+#include "flatcc/portable/pepilogue.h"
 #endif /* REFLECTION_BUILDER_H */

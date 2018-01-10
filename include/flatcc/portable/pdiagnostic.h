@@ -11,7 +11,7 @@
  *
  * #include "pdiagnostic.h"
  *
- * Alternatively use #include "pdiagnostic_push/pop.h"
+ * Alternatively use #include "pprologue/pepilogue.h"
  */
 
 #ifdef _MSC_VER

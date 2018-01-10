@@ -312,7 +312,7 @@ static inline int gen_pragma_push(fb_output_t *out)
     if (out->opts->cgen_pragmas) {
         fprintf(out->fp,
                 "#define PDIAGNOSTIC_IGNORE_UNUSED\n"
-                "#include \"flatcc/portable/pdiagnostic_push.h\"\n");
+                "#include \"flatcc/portable/pprologue.h\"\n");
     }
     return 0;
 }
@@ -321,7 +321,7 @@ static inline int gen_pragma_pop(fb_output_t *out)
 {
     if (out->opts->cgen_pragmas) {
         fprintf(out->fp,
-                "#include \"flatcc/portable/pdiagnostic_pop.h\"\n");
+                "#include \"flatcc/portable/pepilogue.h\"\n");
     }
     return 0;
 }

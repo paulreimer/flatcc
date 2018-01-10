@@ -6,7 +6,7 @@
 /* Common FlatBuffers build functionality for C. */
 
 #define PDIAGNOSTIC_IGNORE_UNUSED
-#include "flatcc/portable/pdiagnostic_push.h"
+#include "flatcc/portable/pprologue.h"
 #ifndef FLATBUILDER_H
 #include "flatcc/flatcc_builder.h"
 #endif
@@ -577,5 +577,5 @@ __flatbuffers_build_scalar(flatbuffers_, flatbuffers_double, double)
 __flatbuffers_build_string(flatbuffers_)
 
 __flatbuffers_build_buffer(flatbuffers_)
-#include "flatcc/portable/pdiagnostic_pop.h"
+#include "flatcc/portable/pepilogue.h"
 #endif /* FLATBUFFERS_COMMON_BUILDER_H */

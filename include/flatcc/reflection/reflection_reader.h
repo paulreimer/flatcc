@@ -11,7 +11,7 @@
 #include <stdalign.h>
 #endif
 #define PDIAGNOSTIC_IGNORE_UNUSED
-#include "flatcc/portable/pdiagnostic_push.h"
+#include "flatcc/portable/pprologue.h"
 #undef flatbuffers_identifier
 #define flatbuffers_identifier "BFBS"
 #undef flatbuffers_extension
@@ -241,5 +241,5 @@ __flatbuffers_define_string_field(2, reflection_Schema, file_ident, 0)
 __flatbuffers_define_string_field(3, reflection_Schema, file_ext, 0)
 __flatbuffers_define_table_field(4, reflection_Schema, root_table, reflection_Object_table_t, 0)
 
-#include "flatcc/portable/pdiagnostic_pop.h"
+#include "flatcc/portable/pepilogue.h"
 #endif /* REFLECTION_READER_H */

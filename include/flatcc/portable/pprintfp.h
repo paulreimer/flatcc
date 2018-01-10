@@ -2,7 +2,7 @@
 #define PPRINTFP_H
 
 #define PDIAGNOSTIC_IGNORE_UNUSED_FUNCTION
-#include "pdiagnostic_push.h"
+#include "pprologue.h"
 
 #ifndef PORTABLE_USE_GRISU3
 #define PORTABLE_USE_GRISU3 1
@@ -26,5 +26,5 @@
 #define print_hex_float(n, p) sprintf(p, "%a", (float)(n))
 #define print_hex_double(n, p) sprintf(p, "%a", (double)(n))
 
-#include "pdiagnostic_pop.h"
+#include "pepilogue.h"
 #endif /* PPRINTFP_H */

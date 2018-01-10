@@ -17,7 +17,7 @@
  */
 
 #define PDIAGNOSTIC_IGNORE_UNUSED_FUNCTION
-#include "pdiagnostic_push.h"
+#include "pprologue.h"
 
 /*
  * isinf is needed in order to stay compatible with strtod's
@@ -115,5 +115,5 @@ static inline const char *parse_float(const char *buf, int len, float *result)
     return end;
 }
 
-#include "pdiagnostic_pop.h"
+#include "pepilogue.h"
 #endif /* PPARSEFP_H */

@@ -6,7 +6,7 @@
 /* Common FlatBuffers read functionality for C. */
 
 #define PDIAGNOSTIC_IGNORE_UNUSED
-#include "flatcc/portable/pdiagnostic_push.h"
+#include "flatcc/portable/pprologue.h"
 #include "flatcc/flatcc_flatbuffers.h"
 
 
@@ -479,5 +479,5 @@ static inline N ## _ ## K ## t N ## _as_typed_root(const void *buffer)\
 #define __flatbuffers_struct_as_root(N) __flatbuffers_buffer_as_root(N, struct_)
 #define __flatbuffers_table_as_root(N) __flatbuffers_buffer_as_root(N, table_)
 
-#include "flatcc/portable/pdiagnostic_pop.h"
+#include "flatcc/portable/pepilogue.h"
 #endif /* FLATBUFFERS_COMMON_H */

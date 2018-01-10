@@ -72,7 +72,7 @@
 #endif
 
 #define PDIAGNOSTIC_IGNORE_UNUSED_FUNCTION
-#include "pdiagnostic_push.h"
+#include "pprologue.h"
 
 static int print_bool(int n, char *p);
 
@@ -620,6 +620,6 @@ int main()
 }
 #endif /* PPRINTINT_TEST */
 
-#include "pdiagnostic_pop.h"
+#include "pepilogue.h"
 
 #endif /* PPRINTINT_H */
